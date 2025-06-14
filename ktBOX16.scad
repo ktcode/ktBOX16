@@ -30,6 +30,7 @@ difference()
     translate([-1/2, -1/2, -30]) cube([86+1, 50+1, 30]);
     
     translate([150, -20, -5+3]) rotate([10, 180, 0]) cube([200, 100, 50]);
+   
 }
 }
 
@@ -80,16 +81,21 @@ difference()
         translate([BX-4,    4, 1.5+0.5+1.5]) cylinder(h=10, r=6.5/2, $fn=100);
         translate([   4, BY-4, 1.5+0.5+1.5]) cylinder(h=10, r=6.5/2, $fn=100);
         translate([BX-4, BY-4, 1.5+0.5+1.5]) cylinder(h=10, r=6.5/2, $fn=100);
+        translate([   4,    4, 1.5+0.5+1.5+1.8]) cylinder(h=10, r1=6.5/2, r2=(6.5+15)/2, $fn=100);
+        translate([BX-4,    4, 1.5+0.5+1.5+1.8]) cylinder(h=10, r1=6.5/2, r2=(6.5+15)/2, $fn=100);
+        translate([   4, BY-4, 1.5+0.5+1.5+1.8]) cylinder(h=10, r1=6.5/2, r2=(6.5+15)/2, $fn=100);
+        translate([BX-4, BY-4, 1.5+0.5+1.5+1.8]) cylinder(h=10, r1=6.5/2, r2=(6.5+15)/2, $fn=100);
         
-        #translate([-M/2+BX+M-3, 17.5+1.5+3.5/2, 1.5-5]) cube([3+3, 9-3.5, 3.5]);
-        #translate([-M/2+BX+M-3, 17.5+1.5+3.5/2, 1.5-5+3.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=3.5/2, $fn=100);
-        #translate([-M/2+BX+M-3, 17.5+1.5+9-3.5/2, 1.5-5+3.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=3.5/2, $fn=100);
-
+        translate([-M/2+BX+M-3, 17.5+1.5+3.5/2, 1.5-5]) cube([3+3, 9-3.5, 3.5]);
+        translate([-M/2+BX+M-3, 17.5+1.5+3.5/2, 1.5-5+3.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=3.5/2, $fn=100);
+        translate([-M/2+BX+M-3, 17.5+1.5+9-3.5/2, 1.5-5+3.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=3.5/2, $fn=100);
 
         translate([-M/2+BX+M+1, 17+7.5/2, 1.5-7]) cube([3+3, 13-7.5, 7.5]);
         translate([-M/2+BX+M+1, 17+7.5/2, 1.5-7+7.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=7.5/2, $fn=100);
         translate([-M/2+BX+M+1, 17+13-7.5/2, 1.5-7+7.5/2]) rotate([0, 90, 0]) cylinder(h=3+3, r=7.5/2, $fn=100);
-        translate([39, -3, -2]) cube([15, 3+3, 2]);
+        
+        //SD Slot
+        //translate([39, -3, -2]) cube([15, 3+3, 2]);
     }
 }
 }
@@ -104,7 +110,7 @@ module waku()
     DX = 58;
     DY = 43;
     DT = 2;
-    DR = 55;
+    DR = 50;
 translate([0, DY/3, Wth])
 rotate([180, 0, 0])
 difference()
